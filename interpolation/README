@@ -18,9 +18,14 @@ at
 
 Y is the output of the interpolation
 
+Usage:
+------
+call quad_inter(V,X,U,Y)
+
 Input:
 ------
 double precision 1D array V(:)
+double precision 1D array X(:)
 double precision 1D array U(:)
 
 Output:
