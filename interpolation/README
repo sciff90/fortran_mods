@@ -1,0 +1,30 @@
+Fortran  Interpolation Modules
+------------------------------
+
+Functions
+---------
+1. Quadratic Interpolation
+
+================================================================================
+
+1. Quadratic Interpolation
+==========================
+Subroutine to do a quadratic fit
+
+V are the function values at the known points X
+
+U is the array containig the x values that the interpolation values are wanted
+at
+
+Y is the output of the interpolation
+
+Input:
+------
+double precision 1D array V(:)
+double precision 1D array U(:)
+
+Output:
+------
+double precision 1D array Y(:)
+
+================================================================================
