@@ -1,0 +1,40 @@
+Fortran Vector Modules
+----------------------
+
+Functions
+---------
+1. Square array contents
+2. Matrix Multiple for row x column
+
+================================================================================
+
+1. Test square array function
+=============================
+b = a**2
+
+Input:
+------
+double precision 1D array a(:)
+
+Output:
+------
+double precision 1D array b(:)
+
+================================================================================
+
+2. Matrix multiply for row x column
+===================================
+c = matmul_GDS(a,b)
+
+Input:
+------
+double precision 1D array a(:)
+double precision 1D array b(:)
+
+Output:
+------
+double precision 2D array c(:,:)
+
+NOTE: This produces an array with dimensions c(dim(b),dim(a))
+
+================================================================================
