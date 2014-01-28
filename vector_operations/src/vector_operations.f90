@@ -1,7 +1,7 @@
 module vector_operations
   implicit none
   private
-  public :: sq_elems,matmul_GDS
+  public :: sq_elems,matmul_GDS,sum_cumulative
 
   contains
 
@@ -31,5 +31,18 @@ module vector_operations
 
 
   end function matmul_GDS
+
+  !Function to give a cumulative sum of a 1D array
+  function sum_cumulative(x) result(y)
+    implicit none
+    double precision,intent(in)  :: x(:)
+    double precision,dimension(lbound(x,dim=1):ubound(x,dim=1)) :: y
+
+    integer :: ii
+    y(lbound(x,dim=1)) = x(lbound(x,dim=1))
+    do ii = lbound(x,dim=1)+1,ubound(x,dim=1)
+      y(ii) = y(ii-1)+x(ii)
+    end do
+  end function
 
 end module vector_operations

@@ -1,7 +1,7 @@
 program main
   use vector_operations
   implicit none
-  double precision,dimension(:),allocatable :: x,y
+  double precision,dimension(:),allocatable :: x,y,sum_test
   double precision,dimension(:,:),allocatable :: t
   integer :: N = 3
   integer :: M = 4
@@ -29,6 +29,11 @@ program main
     write(*,*)  (t(ii,jj),jj=0,N-1)
   end do
 
+  allocate(sum_test(lbound(x,dim=1):(ubound(x,dim=1))))
 
+  sum_test = sum_cumulative(x)
+
+  write(*,*)'X = ',x
+  write(*,*)'sum test = ',sum_test
 
 end program main
